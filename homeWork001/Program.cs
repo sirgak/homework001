@@ -6,28 +6,15 @@ namespace homeWork001
     {
         static void Main(string[] args)
         {
-            //Характеристика 
-            string name = "Yan";
-            uint age = 27;
-            byte weight = 60;
-            short health = 100;
-            float height = 1.75f;
-            double reach = 1.72;
-            long skill = 0;
-            int balance = -10;
-            char sex = 'M';
-            bool job = false;
-
-            Console.WriteLine(name);
-            Console.WriteLine(age);
-            Console.WriteLine(weight);
-            Console.WriteLine(height);
-            Console.WriteLine(health);
-            Console.WriteLine(reach);
-            Console.WriteLine(skill);
-            Console.WriteLine(balance);
-            Console.WriteLine(sex);
-            Console.WriteLine(job);
+            string name;
+            char symbol;
+            Console.Write("Напишите имя: ");
+            name = Console.ReadLine();
+            Console.Write("Символ: ");
+            symbol = Convert.ToChar(Console.ReadLine());
+            int howMuchSymbols = Convert.ToInt32 (name.Length);
+            var symbols = new string(symbol, howMuchSymbols + 2);
+            Console.WriteLine(symbols + "\n" + symbol + name + symbol + "\n" + symbols);
         }
     }
 }
